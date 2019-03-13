@@ -1,0 +1,70 @@
+<!--index.wxml-->
+<template name="authBox">
+    <view class="userinfoAuthorizeView">
+        <view style="margin: 15rpx;">
+            <label style="font-size: 12px;">本小程序需要访问您的公开用户信息以及微信运动，以便您可以使用步数换取礼品哦~</label>
+        </view>
+        <button open-type="getUserInfo" class="userinfoAuthorizeBtn" bindgetuserinfo="onAuthUserInfo">授权</button>
+    </view>
+</template>
+
+<template name="iconButtonView">
+    <view style="margin-left: 40rpx">
+        <button style="border: none; background-image: url({{item.bkimage}}) ; background-size: contain; width: 50px; height: 50px;"
+                bindtap="onGreetIconBtnClick">
+        </button>
+        <label style="font-size: 12px;">{{item.title}}</label>
+    </view>
+</template>
+
+<template name="productView" >
+    <view style='width: 45%; height: 270px; margin-left:20rpx; margin-top: 30rpx;border: 2rpx solid #CCC'>
+        <image style="background-image: url({{item.product_image}}); background-repeat: norepeat; background-size: 100% 100%; width: 100%; height: 160px;"></image>
+        <label style="display: inline-block; width:100%;font-size: 18px; font-weight: bold; white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">{{item.product_title}}</label>
+        <view class="flexView" >
+            <view style="margin-left: 1px; ">
+                <image mode="aspectFit" src="http://10.5.139.1:8080/static/running/index/img/top_fire.png" style="width:14px; height:14px"></image>
+                <label style="font-size: 12px; color: #F00">{{item.roots}}</label>
+            </view>
+            <view style="margin-left: 5px;">
+                <image mode="aspectFit" src="http://10.5.139.1:8080/static/running/index/img/top_sweat.png" style="width:14px; height:14px"></image>
+                <label style="font-size: 12px; color: #F99">兑换人数：{{item.exchanges}}</label>
+            </view>
+        </view>
+        <button style="color: #FC9;width: 100%; height: 50px;"
+                bindtap="onExchangeClick" data-product="{{item}}">免费兑换
+        </button>
+    </view>
+</template>
+
+<view class="container">
+    <view class="flexView ">
+        <view class="flexView " style="margin-left: 10px; ">
+            <image mode="aspectFit" src="http://10.5.139.1:8080/static/running/index/img/top_fire.png" style="width:30px; height:30px"></image>
+            <label>{{roots}}</label>
+        </view>
+        <view class="flexView " style="margin-right: 10px; justify-content: flex-end; ">
+            <image mode="aspectFit" src="http://10.5.139.1:8080/static/running/index/img/top_sweat.png" style="width:30px; height:30px"></image>
+            <label>汗水</label>
+        </view>
+    </view>
+
+    <!--
+    <view style="width:100%; height:250px; background-image: url(http://10.5.139.1:8080/static/running/index/img/top.png)">
+        <view wx:if="{{showAuthBox}}">
+            <template is="authBox"></template>
+        </view>
+    </view>
+    -->
+    
+    <label>每邀请一个好友即可获赠5000步</label>
+    <button style="font-size: 14px; color: #F90; border: 2rpx solid #FC9">{{add_friend_btn_tip}}</button>
+
+    <label style="padding-top: 30rpx;">兑换专区</label>
+    <view style="width: 100%; padding: 0 20rpx 0 20rpx; display:flex; justify-content: flex-start; flex-wrap: wrap">
+        <block wx:for="{{products}}" wx:key="*this">
+            <template is="productView" data="{{item}}"></template>
+        </block>
+    </view>
+
+</view>

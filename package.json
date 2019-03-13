@@ -1,0 +1,19 @@
+{
+  "name": "Running",
+  "version": "1.0.0",
+  "description": "Running by Ant.SH",
+  "scripts": {
+    "lint":"eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "ant.sh",
+  "license": "MIT",
+  "private": true,
+  "bugs" : {
+    "url": ""
+  },
+  "homepage": "http://www.ant.sh"
+}

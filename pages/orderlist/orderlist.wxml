@@ -1,0 +1,62 @@
+<!--me.wxml-->
+
+<template name="orderItemView">
+    <view class="order-item-view">
+        <view style="height: 70%; display: flex; align-items: center;">
+            <image class="order-item-image" src="{{item.product.product_image}}"></image>
+            <label class="order-item-title">{{item.product.product_title}}</label>
+        </view>
+        <view style="height: 30%; text-align: left; margin-bottom: 10rpx;">
+            <label class="order-item-instruction">{{item.time}}</label>
+            <label class="order-item-instruction" style="margin-left: 30rpx;">共1件商品 实兑付：{{item.product.roots}}步数</label>
+        </view>
+    </view>
+</template>
+
+<view style="padding: 0 10rpx 0 10rpx; height: 100%;">
+    <view class="swiper-view">
+        <view class="swiper-item {{currentOrderTab==0 ? 'swiper-item-on' : ''}}" data-current="0" bindtap="onSwichOrderTab">全部</view>
+        <view class="swiper-item {{currentOrderTab==1 ? 'swiper-item-on' : ''}}" data-current="1" bindtap="onSwichOrderTab">待支付</view>
+        <view class="swiper-item {{currentOrderTab==2 ? 'swiper-item-on' : ''}}" data-current="2" bindtap="onSwichOrderTab">待发货</view>
+        <view class="swiper-item {{currentOrderTab==3 ? 'swiper-item-on' : ''}}" data-current="3" bindtap="onSwichOrderTab">待收货</view>
+        <view class="swiper-item {{currentOrderTab==4 ? 'swiper-item-on' : ''}}" data-current="4" bindtap="onSwichOrderTab">已完成</view>
+    </view>
+
+    <swiper current="{{currentOrderTab}}" style="margin-top: 30rpx; height: 100%;">
+        <swiper-item>
+            <block wx:for="{{orderList.toPay}}" wx:key="*this">
+                <template is="orderItemView" data="{{item}}"></template>
+            </block>
+            <block wx:for="{{orderList.toDeliver}}" wx:key="*this">
+                <template is="orderItemView" data="{{item}}"></template>
+            </block>
+            <block wx:for="{{orderList.toTake}}" wx:key="*this">
+                <template is="orderItemView" data="{{item}}"></template>
+            </block>
+            <block wx:for="{{orderList.finished}}" wx:key="*this">
+                <template is="orderItemView" data="{{item}}"></template>
+            </block>
+        </swiper-item>
+        <swiper-item>
+            <block wx:for="{{orderList.toPay}}" wx:key="*this">
+                <template is="orderItemView" data="{{item}}"></template>
+            </block>
+        </swiper-item>
+        <swiper-item>
+            <block wx:for="{{orderList.toDeliver}}" wx:key="*this">
+                <template is="orderItemView" data="{{item}}"></template>
+            </block>
+        </swiper-item>
+        <swiper-item>
+            <block wx:for="{{orderList.toTake}}" wx:key="*this">
+                <template is="orderItemView" data="{{item}}"></template>
+            </block>
+        </swiper-item>
+        <swiper-item>
+            <block wx:for="{{orderList.finished}}" wx:key="*this">
+                <template is="orderItemView" data="{{item}}"></template>
+            </block>
+        </swiper-item>
+    </swiper>
+    
+</view>

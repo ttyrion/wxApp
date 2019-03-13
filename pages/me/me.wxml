@@ -1,0 +1,65 @@
+<!--me.wxml-->
+
+<template name="iconButtonView">
+    
+</template>
+
+<view>
+    <view class="userInfoRootView">
+        <image mode="aspectFit" src="http://10.5.139.1:8080/static/running/me/icon/bu.png" style="width:70px; height:70px"></image>
+        <view class="userInfoView">
+            <text >{{nickName}}</text>
+            <view style="margin-top: 4rpx; font-size: 12px;">
+                <text >ID: {{uid}} | </text>  
+                <text >连续签到：{{signedDays}}天</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="orderRootView">
+        <view style="display: flex; align-items: center;border-bottom: 1rpx #CCC dashed;">
+            <text style="font-size: 16px; font-weight: bold;">我的订单</text>
+            <button class="allOdersButton" bindtap='onShowAllOders'> 全部订单 </button>
+        </view>
+        <view style="display: flex; justify-content: space-between; align-items: center; padding: 20rpx 30rpx 20rpx 30rpx;">
+            <view>
+                <button style="border: none; background-image: url(http://10.5.139.1:8080/static/running/me/icon/toPay.png); background-size: contain; width: 45px; height: 45px;"
+                        bindtap="onPay">
+                </button>
+                <label style="font-size: 14px;">待支付</label>
+            </view>
+            <view>
+                <button style="border: none; background-image: url(http://10.5.139.1:8080/static/running/me/icon/toDeliver.png) ; background-size: contain; width: 45px; height: 45px;"
+                        bindtap="onDeliver">
+                </button>
+                <label style="font-size: 14px;">待发货</label>
+            </view>
+            <view>
+                <button style="border: none; background-image: url(http://10.5.139.1:8080/static/running/me/icon/toTake.png) ; background-size: contain; width: 45px; height: 45px;"
+                        bindtap="onTake">
+                </button>
+                <label style="font-size: 14px;">待收货</label>
+            </view>
+            <view>
+                <button style="border: none; background-image: url(http://10.5.139.1:8080/static/running/me/icon/toService.png) ; background-size: contain; width: 45px; height: 45px;"
+                        bindtap="onCustomerService">
+                </button>
+                <label style="font-size: 14px;">退款/售后</label>
+            </view>
+        </view>
+    </view>
+    <view class="orderRootView">
+        <view style="padding-bottom: 15rpx; display: flex; align-items: center;border-bottom: 1rpx #CCC dashed;">
+            <text style="font-size: 16px; font-weight: bold;">常用功能</text>
+        </view>
+        <view style="display: flex; justify-content: space-between; align-items: center; padding: 20rpx 30rpx 20rpx 30rpx;">
+            <view>
+                <button style="border: none; background-image: url(http://10.5.139.1:8080/static/running/me/icon/addrManage.png) ; background-size: contain; width: 45px; height: 45px;"
+                        bindtap="onAddressManageClick">
+                </button>
+                <label style="font-size: 14px;">地址管理</label>
+            </view>
+        </view>
+    </view>
+    
+</view>

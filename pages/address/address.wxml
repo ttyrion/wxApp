@@ -1,0 +1,66 @@
+<!--me.wxml-->
+<view>
+    <view class="addressview">
+        <label>联系人</label>
+        <input name="contactName" class="addressInput" 
+            placeholder="张三" 
+            placeholder-style="color:#999999;"
+            value="{{contactName}}"
+            bindinput="onContactInput">
+        </input>
+    </view>
+    <view class="addressview">
+        <label>手机号码</label>
+        <input name="phone" class="addressInput" 
+            placeholder="0000-0000"
+            value="{{contactPhoneNum}}"
+            bindinput="onPhoneInput"
+            placeholder-style="color:#999999;">
+        </input>
+    </view>
+    <view class="addressview">
+        <label>地区</label>
+        <input name="zone" class="addressInput" 
+            placeholder="" 
+            placeholder-style="color:#999999;"
+            bindinput="onCityInput"
+            value="{{contactCity}}">
+        </input>
+        <button style="width: 220rpx;text-align: center;" bindtap="onSelectAddress">选择地区</button>
+    </view>
+    <view class="addressview">
+        <label>详细地址</label>
+        <input name="address" class="addressInput" 
+            placeholder=""
+            value="{{contactDetailAddr}}"
+            bindinput="onDetailAddrInput"
+            placeholder-style="color:#999999;">
+        </input>
+    </view>
+
+    <button style="margin-top: 10rpx;" bindtap="onSaveAddress">保存</button>
+
+    <view style="visibility:{{showSelectAddress ? 'visible':'hidden'}}; height: 400rpx;">
+        <picker-view style="width: 100%; height: 300px;" bindchange="onAddressChange" value="{{value}}" wx:key="*this">
+            <picker-view-column>
+                <view wx:for="{{addressInfo.provinces}}">
+                    <text>{{item}}</text>
+                </view>
+            </picker-view-column>
+            <picker-view-column>
+                <view wx:for="{{addressInfo.cities}}">
+                    <text>{{item}}</text>
+                </view>
+            </picker-view-column>
+            <picker-view-column>
+                <view wx:for="{{addressInfo.areas}}">
+                    <text>{{item}}</text>
+                </view>
+            </picker-view-column>
+        </picker-view>
+        <view class="addressview">
+            <button style="width: 50%;" bindtap="onConfirmAddress">确定</button>
+            <button style="width: 50%;" bindtap="onCancelAddress">取消</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,46 @@
+.userInfoRootView {
+    border: 1rpx #ccc solid;
+    border-radius: 15rpx;
+    margin:30rpx 20rpx 10rpx 20rpx;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.userInfoView {
+    margin-left: 10rpx;
+    height: 100%;
+    font-size: 14x;
+    margin-top: 60rpx;
+    padding-left: 10rpx;
+}
+
+.authBtn {
+    border: 2rpx #00F solid;
+    border-radius: 30rpx;
+    width: 200rpx;
+    height: 40rpx;
+}
+
+.orderRootView {
+    margin-top: 20rpx;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+}
+
+button::after {
+    border: none;
+}
+
+.allOdersButton {
+    /*wxss不能引用local图片，可以使用图片的base64编码或者在xml中使用全局属性style*/
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAtCAYAAADRLVmZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQDSURBVGhD7ZgJb9pAFIT7//9X7vu+r+ZUDqIoBUFQss23Zaxh69jAUqpWjIRsvM943uy895x8C/8opsQnjSnxSeP/JN59e+udhfDW6YRm80fodrvxu44fHx/x6Hh/fy/WATH8Ftf1vdVqxfNRUUncH/T6+hqur6/D5ffv8Rx0Ou1S4oDrJycn4ebmJrTb7d7VEAm7IKOi1io8BPV44OnpaVhaWgrHx8dxzUkT4ypz3/r6evxcXFwUa+wcCeeilriTe3h4iERWV1djEg5UhZRAok+Pj2FrayssLCyEs7OzYgc5tprNeD4qhipOVIPM3t5eJHN1ddVHQKq7x+/v74tkidf1XLsMTFwPBC8vL2F3dzfMzs5GGziwgceyY41GI+zv78cEUN49Pyoqibsq2MBt8/z8HDY2NsL29nZUUr4lRnHuZeLZKchT4G6rUVBJPG1ZJCKfAroLHkZ5lHQoVjtAMtiMRLHNwcFBL3I0DOXxMmCbMvJcL4NsQ42cn58XrVVJujBVyCbOltNtDg8PYwL0bpEBKO1kUJ94WqpapXuenfIa+QpZxN3zTFUKdmZmpujzAsTTgsXzm5ubMVk87zXyx4kDJ48NdnZ2fpG5vOwrQI8DEG00nqLX8TzJkvygGAtxJ4W3IbGysvLbuEd5xepIsuwU5PG8lK/zejZxAAltL+caUlgB5UUG4OGUPMmqRohnqGntK4yFOIC4FEVlbMB7DWRub28LBYnTfHArMWFJlNlwd3fXu/o1xm4VADFUXltbi5bBOrIMxDl3K3A/xYplSDadxmXIIu4Dyi1AO9Sg4VW4bEpCXOSJhzSJEq8dqUK24jxED+JIQUKCbYeE93TWXWlAPdCJsAhKD/rWOB7ivcJksKAy280UTdshcW4rKT03Nxft5EVchyziUhpQjEUn+RworlxaAxDE04x+4pm2fbbrCVGFLOJRxU/yKA1pfO2e1roT4ZwYYrGHT03AemqnMmRbBU9jD3laf1BDOhI30hCi7WEPXrJok8MqLWQRl0fxtN6xURgFU+W4Tn9mZ/gwJZ1oujN1yCLOdqM0hShPu8penCQJ4eXl5do+zW/UoZK4ew8S+kFaGPbgw3ZDNLWFn1MDGkY+RXMwkOIiDBm6Ae8V8/PzxXuFUKYUnmZnePfGHoP26TrUEkcdEaLlicTR0VHfmx9IlSSe4YLS2GOYPl2HSuKyAOCh9NvFxcV4TEGs7ME9xNOnKV4K19coxFxUEvfios2hGv8I0hh3a/R1kE+StDkSxCpO1BPMQSVxJ4YtICOCkPH1FCKvmNjuLIHcAh2oOMtAkVURT6EePy7UWsXJce5Kc/T1aAMjl94P0u+jYmTF/zamxCeNKfFJY0p8sgjhJ6Vt1zMysP12AAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: right center;
+    background-color: transparent;
+    margin-right: 0rpx;
+    border: none;
+    width: 90px;
+    font-size: 14px;
+}

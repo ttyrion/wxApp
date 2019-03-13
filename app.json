@@ -1,0 +1,31 @@
+{
+  "comments": "/*global config file: pages，window backgroud color...*/",
+
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/me/me",
+    "pages/address/address",
+    "pages/orderlist/orderlist"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "运动宝",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/index/icon/index.jpg",
+        "selectedIconPath": "pages/index/icon/index.jpg"
+    },
+    {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "pages/me/icon/me.jpg",
+        "selectedIconPath": "pages/me/icon/me.jpg"
+    }]
+  }
+}
