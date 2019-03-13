@@ -6,7 +6,7 @@ Page({
     //data对象是提供给wxml视图中的组件进行数据绑定用的
     //wxml视图中的动态数据均来自于此
     data: {
-        title: "地址管理",
+        title: "我的订单",
         showSelectAddress: false,
         value: [0,0,0],
         addressInfo: {
